@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | EventCraft</title>
+  <meta name="description" content="The page you are looking for does not exist or has been moved. Return to EventCraft home or go back.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: radial-gradient(circle at 50% 30%, rgba(99, 102, 241, 0.15), rgba(9, 13, 22, 0.95)); padding: 2rem 1rem;">
+
+  <!-- PAGE PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <img src="assets/images/logo.webp" alt="Logo" class="preloader-logo">
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- 404 CLEAN CENTERED CARD (NO HEADER, NO FOOTER, NO SEARCH BAR) -->
+  <div class="glass-card text-center" style="max-width: 580px; width: 100%; padding: 3.5rem 2.5rem; border-color: var(--glass-border-gold); box-shadow: var(--shadow-lg);">
+    <img src="assets/images/logo.webp" alt="Logo" class="brand-logo-img" style="margin: 0 auto 1.5rem auto; display: block; max-height: 48px;">
+    
+    <div class="section-badge"><i class="fas fa-exclamation-circle"></i> Error 404</div>
+
+    <div class="text-gradient" style="font-size: clamp(5rem, 12vw, 8.5rem); font-family: var(--font-heading); font-weight: 900; line-height: 1; margin: 0.5rem 0;">
+      404
+    </div>
+
+    <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 0.75rem;">Page Not Found</h2>
+    
+    <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 2.5rem;">
+      The page or event stage you are looking for does not exist, was renamed, or is currently unavailable.
+    </p>
+
+    <!-- ONLY TWO BUTTONS: HOME & BACK -->
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="index.html" class="btn btn-gold" style="flex: 1; min-width: 140px;"><i class="fas fa-home"></i> Home</a>
+      <button onclick="history.back()" class="btn btn-outline" style="flex: 1; min-width: 140px;"><i class="fas fa-arrow-left"></i> Back</button>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

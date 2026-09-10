@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventCraft | Luxury Event Management & Architecture</title>
+  <meta name="description" content="EventCraft is a world-class luxury event management agency crafting corporate galas, high-profile weddings, music festivals, and brand launches worldwide.">
+  
+  <!-- FontAwesome & Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <img src="assets/images/logo.webp" alt="Logo" class="preloader-logo">
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.webp" alt="Logo" class="brand-logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <button class="mobile-nav-close" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="mobile-menu-footer">
+          <a href="auth.html" class="btn btn-outline btn-sm"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+          <a href="auth.html?tab=signup" class="btn btn-gold btn-sm"><i class="fas fa-user-plus"></i> Get Started</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="auth.html" class="btn btn-outline btn-sm"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="auth.html?tab=signup" class="btn btn-gold btn-sm"><i class="fas fa-user-plus"></i> Get Started</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: HERO BANNER -->
+  <section class="hero-section" id="section-hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="section-badge"><i class="fas fa-crown"></i> World-Class Event Architects</div>
+        <h1>Elevating Celebrations into <span class="text-gradient">Timeless Masterpieces</span></h1>
+        <p>From high-stakes corporate galas to breathtaking luxury weddings, we engineer unforgettable experiences with precision, innovation, and unmatched luxury.</p>
+        <div class="hero-btns">
+          <a href="404.html" class="btn btn-gold"><i class="fas fa-calendar-alt"></i> Explore Events</a>
+          <a href="404.html" class="btn btn-outline"><i class="fas fa-calculator"></i> Estimate Cost</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-img-wrapper">
+          <img src="assets/images/hero-event.webp" alt="Luxury Gala Event" width="800" height="500" loading="eager">
+        </div>
+        <div class="floating-badge badge-1">
+          <i class="fas fa-star text-gold"></i>
+          <div>
+            <div style="font-weight: 700;">99.4% Client Rating</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Over 500+ Luxury Events</div>
+          </div>
+        </div>
+        <div class="floating-badge badge-2">
+          <i class="fas fa-trophy text-gold"></i>
+          <div>
+            <div style="font-weight: 700;">Global Award 2026</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Best Event Agency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: STATS & PERFORMANCE COUNTER -->
+  <section class="section-spacing" id="section-stats" style="background: rgba(15, 23, 42, 0.4); border-y: 1px solid var(--glass-border);">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card glass-card">
+          <div class="stat-number" data-target="520" data-suffix="+">0</div>
+          <div class="stat-label">Events Executed Globally</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-number" data-target="25" data-prefix="$" data-suffix="M+">0</div>
+          <div class="stat-label">Event Budget Managed</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-number" data-target="99" data-suffix=".4%">0</div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-number" data-target="48" data-suffix="+">0</div>
+          <div class="stat-label">International Awards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: COMPANY VISION & ABOUT SNAPSHOT -->
+  <section class="section-spacing" id="section-vision">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Vision & Integrity</div>
+        <h2>Redefining the Future of Luxury Events</h2>
+        <p>We blend immersive spatial design, cutting-edge event tech, and elite concierge management to craft moments that transcend expectations.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+        <div class="glass-card">
+          <i class="fas fa-lightbulb text-gold" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+          <h3>Creative Mastery</h3>
+          <p style="color: var(--text-muted);">Bespoke themes, dynamic lighting design, and sensory architectural setups crafted tailored to your exact brand vision.</p>
+        </div>
+        <div class="glass-card">
+          <i class="fas fa-shield-alt text-gold" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+          <h3>Flawless Execution</h3>
+          <p style="color: var(--text-muted);">Military-grade logistics, real-time risk management, and seamlessly coordinated multi-vendor workflows.</p>
+        </div>
+        <div class="glass-card">
+          <i class="fas fa-gem text-gold" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+          <h3>VIP Hospitality</h3>
+          <p style="color: var(--text-muted);">White-glove concierge services, high-security guest handling, and curated gourmet catering experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: FEATURED SERVICES GRID -->
+  <section class="section-spacing" id="section-services" style="background: rgba(15, 23, 42, 0.6);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Full Spectrum Expertise</div>
+        <h2>Our Bespoke Event Offerings</h2>
+        <p>From intimate celebrity gatherings to mega-scale international expos, discover our suite of services.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="event-card">
+          <div class="card-media">
+            <img src="assets/images/corporate.webp" alt="Corporate Summit" width="600" height="400" loading="lazy">
+            <div class="card-tag">Enterprise</div>
+          </div>
+          <div class="card-body">
+            <h3>Corporate Conferences & Summits</h3>
+            <p>High-impact leadership summits, keynotes, and global stakeholder galas built for authority.</p>
+            <div class="card-meta">
+              <span><i class="fas fa-users"></i> Up to 10,000 Attendees</span>
+              <a href="404.html" class="text-gold">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="card-media">
+            <img src="assets/images/wedding.webp" alt="Luxury Wedding" width="600" height="400" loading="lazy">
+            <div class="card-tag">Luxury</div>
+          </div>
+          <div class="card-body">
+            <h3>Royal Destination Weddings</h3>
+            <p>Opulent marital celebrations engineered with romantic grandeur and bespoke floral artistry.</p>
+            <div class="card-meta">
+              <span><i class="fas fa-heart"></i> Exclusive Venues</span>
+              <a href="404.html" class="text-gold">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="card-media">
+            <img src="assets/images/concert.webp" alt="Concert & Festival" width="600" height="400" loading="lazy">
+            <div class="card-tag">Entertainment</div>
+          </div>
+          <div class="card-body">
+            <h3>Music Festivals & Concerts</h3>
+            <p>State-of-the-art acoustics, light shows, pyro engineering, and top-tier artist management.</p>
+            <div class="card-meta">
+              <span><i class="fas fa-music"></i> Outdoor & Indoor</span>
+              <a href="404.html" class="text-gold">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: UPCOMING & SPOTLIGHT EVENTS -->
+  <section class="section-spacing" id="section-events">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Calendar 2026</div>
+        <h2>Upcoming Flagship Events</h2>
+        <p>Explore high-profile events managed by EventCraft across major global cities.</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Events</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="gala">Galas</button>
+        <button class="filter-btn" data-filter="entertainment">Entertainment</button>
+      </div>
+
+      <div class="cards-grid">
+        <div class="event-card" data-category="corporate">
+          <div class="card-media">
+            <img src="assets/images/launch.webp" alt="NextGen Tech Launch" width="600" height="400" loading="lazy">
+            <div class="card-tag">Oct 15, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>NextGen AI & Tech Summit</h3>
+            <p>New York • Diamond Arena Hall</p>
+            <button class="btn btn-outline btn-sm w-100" data-modal-target="modal-event-1"><i class="fas fa-ticket-alt"></i> View Details & Tickets</button>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="gala">
+          <div class="card-media">
+            <img src="assets/images/gala.webp" alt="Charity Gala" width="600" height="400" loading="lazy">
+            <div class="card-tag">Nov 02, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>Crystal Ball Charity Gala</h3>
+            <p>London • Royal Palace Pavilion</p>
+            <button class="btn btn-outline btn-sm w-100" data-modal-target="modal-event-1"><i class="fas fa-ticket-alt"></i> View Details & Tickets</button>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="entertainment">
+          <div class="card-media">
+            <img src="assets/images/expo.webp" alt="Hybrid Expo" width="600" height="400" loading="lazy">
+            <div class="card-tag">Dec 10, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>Global Hybrid Design Expo</h3>
+            <p>Dubai • Skyline Convention Center</p>
+            <button class="btn btn-outline btn-sm w-100" data-modal-target="modal-event-1"><i class="fas fa-ticket-alt"></i> View Details & Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: WHY CHOOSE US (4 PILLARS) -->
+  <section class="section-spacing" id="section-pillars" style="background: rgba(15, 23, 42, 0.4);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">The EventCraft Edge</div>
+        <h2>Why Discriminating Clients Choose Us</h2>
+        <p>Four foundational standards that ensure every event is executed to absolute perfection.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+        <div class="glass-card text-center">
+          <i class="fas fa-clock text-gold" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <h4>24/7 Dedicated Concierge</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Direct phone access to senior event managers every step of the way.</p>
+        </div>
+        <div class="glass-card text-center">
+          <i class="fas fa-calculator text-gold" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <h4>Transparent Budgeting</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">No hidden fees or unexpected markups. Total line-item clarity.</p>
+        </div>
+        <div class="glass-card text-center">
+          <i class="fas fa-map-marked-alt text-gold" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <h4>AI Venue Matchmaker</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Curated access to 300+ off-market secret venues worldwide.</p>
+        </div>
+        <div class="glass-card text-center">
+          <i class="fas fa-wifi text-gold" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <h4>Hybrid & Broadcast Ready</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">High-definition multi-camera live streaming and VR integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: INTERACTIVE EVENT COST CALCULATOR -->
+  <section class="section-spacing" id="section-calculator">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Instant Estimator</div>
+        <h2>Calculate Your Event Budget</h2>
+        <p>Select your event parameters below to receive an instant, accurate investment estimation.</p>
+      </div>
+
+      <div class="calc-wrapper">
+        <div class="calc-grid">
+          <div>
+            <div class="form-group">
+              <label for="calc-event-type">Select Event Type</label>
+              <select id="calc-event-type" class="form-select">
+                <option value="corporate">Corporate Conference / Summit</option>
+                <option value="wedding">Luxury Destination Wedding</option>
+                <option value="concert">Music Festival / Concert</option>
+                <option value="gala">Private Charity Gala</option>
+                <option value="launch">Product Launch Event</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="calc-guests">Expected Guests Count</label>
+              <input type="number" id="calc-guests" class="form-control" value="150" min="20" max="10000">
+            </div>
+
+            <div class="form-group">
+              <label for="calc-venue">Venue Tier Level</label>
+              <select id="calc-venue" class="form-select">
+                <option value="standard">Standard Premier Ballroom</option>
+                <option value="premium">Premium 5-Star Hotel Arena</option>
+                <option value="luxury">Ultra-Luxury Palace / Private Island</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="calc-catering">Catering & Dining Tier</label>
+              <select id="calc-catering" class="form-select">
+                <option value="standard">Standard Buffet (3-Course)</option>
+                <option value="gourmet">Gourmet Plated Experience</option>
+                <option value="michelin">Michelin Star Chef Custom Menu</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-result-box">
+            <div>
+              <h3 style="margin-bottom: 0.5rem;">Estimated Investment</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Includes end-to-end planning, staffing, venue setup, and stage tech.</p>
+              <div class="result-price" id="calc-total-price">$18,750</div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <a href="404.html" class="btn btn-gold w-100"><i class="fas fa-paper-plane"></i> Lock In Your Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: CLIENT TESTIMONIALS & STORIES -->
+  <section class="section-spacing" id="section-testimonials" style="background: rgba(15, 23, 42, 0.6);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Client Applause</div>
+        <h2>Stories of Unforgettable Success</h2>
+        <p>Read how industry leaders and visionary couples experienced EventCraft perfection.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="glass-card">
+          <div style="color: var(--accent-gold); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-muted); margin-bottom: 1.5rem;">"EventCraft managed our 3-day tech summit with 4,000 international delegates. The lighting, hybrid streams, and security were flawless!"</p>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="assets/images/testimonial-1.webp" alt="Client Avatar" width="50" height="50" style="border-radius: 50%;">
+            <div>
+              <h4 style="font-size: 1rem;">Sarah Jenkins</h4>
+              <p style="font-size: 0.8rem; color: var(--text-dim);">VP of Marketing, Apex Global</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div style="color: var(--accent-gold); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-muted); margin-bottom: 1.5rem;">"Our Lake Como wedding felt like a cinematic movie! Every flower, light fixture, and orchestra chord was executed to perfection."</p>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="assets/images/testimonial-2.webp" alt="Client Avatar" width="50" height="50" style="border-radius: 50%;">
+            <div>
+              <h4 style="font-size: 1rem;">David & Clara Chen</h4>
+              <p style="font-size: 0.8rem; color: var(--text-dim);">Private Clients</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <div style="color: var(--accent-gold); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-muted); margin-bottom: 1.5rem;">"Raised over $2.4 Million in a single gala night. EventCraft's stage design and VIP concierge created an atmosphere of pure luxury."</p>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="assets/images/testimonial-3.webp" alt="Client Avatar" width="50" height="50" style="border-radius: 50%;">
+            <div>
+              <h4 style="font-size: 1rem;">Victoria Croft</h4>
+              <p style="font-size: 0.8rem; color: var(--text-dim);">Gala Chairperson, Hope Foundation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: EXCLUSIVE VENUE SHOWCASE -->
+  <section class="section-spacing" id="section-venues">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Secret Locations</div>
+        <h2>Curated Global Venues</h2>
+        <p>Unlock access to iconic architectural landmarks and exclusive private estates.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="event-card">
+          <div class="card-media">
+            <img src="assets/images/venue-1.webp" alt="The Diamond Ballroom" width="600" height="400" loading="lazy">
+            <div class="card-tag">New York</div>
+          </div>
+          <div class="card-body">
+            <h3>The Diamond Ballroom</h3>
+            <p>Capacity: 1,500 Guests • High Glass Ceilings • Manhattan Views</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="card-media">
+            <img src="assets/images/venue-2.webp" alt="Skyline Arena" width="600" height="400" loading="lazy">
+            <div class="card-tag">London</div>
+          </div>
+          <div class="card-body">
+            <h3>Skyline Glass Arena</h3>
+            <p>Capacity: 3,000 Guests • Rooftop Helipad • Panoramic City Line</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="card-media">
+            <img src="assets/images/venue-3.webp" alt="Palace Bay Pavilion" width="600" height="400" loading="lazy">
+            <div class="card-tag">Dubai</div>
+          </div>
+          <div class="card-body">
+            <h3>Palace Bay Pavilion</h3>
+            <p>Capacity: 5,000 Guests • Waterfront Entrance • Private Dock</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: EXECUTIVE TEAM -->
+  <section class="section-spacing" id="section-team" style="background: rgba(15, 23, 42, 0.4);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Masterminds</div>
+        <h2>Meet Our Creative Architects</h2>
+        <p>The visionaries and producers behind the world's most talked-about events.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="glass-card text-center">
+          <img src="assets/images/team-1.webp" alt="Alexander Vance" width="120" height="120" style="border-radius: 50%; margin: 0 auto 1rem auto; border: 2px solid var(--accent-gold);">
+          <h3>Alexander Vance</h3>
+          <p class="text-gold" style="font-size: 0.85rem; font-weight: 600;">Chief Event Director</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">15+ years managing Fortune 500 summits and royal galas.</p>
+        </div>
+
+        <div class="glass-card text-center">
+          <img src="assets/images/team-2.webp" alt="Sophia Reynolds" width="120" height="120" style="border-radius: 50%; margin: 0 auto 1rem auto; border: 2px solid var(--accent-gold);">
+          <h3>Sophia Reynolds</h3>
+          <p class="text-gold" style="font-size: 0.85rem; font-weight: 600;">Creative Design Lead</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Award-winning spatial artist & floral luxury designer.</p>
+        </div>
+
+        <div class="glass-card text-center">
+          <img src="assets/images/team-3.webp" alt="Marcus Sterling" width="120" height="120" style="border-radius: 50%; margin: 0 auto 1rem auto; border: 2px solid var(--accent-gold);">
+          <h3>Marcus Sterling</h3>
+          <p class="text-gold" style="font-size: 0.85rem; font-weight: 600;">Head of Technical Logistics</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Pioneer in stage engineering, lighting, and audio stream tech.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: BLOG & INDUSTRY INSIGHTS -->
+  <section class="section-spacing" id="section-blog">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Knowledge Hub</div>
+        <h2>Latest Industry Trends</h2>
+        <p>Insights on sustainable event technology, luxury decor trends, and guest safety.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="glass-card">
+          <img src="assets/images/blog-1.webp" alt="Blog Post" width="600" height="400" style="border-radius: var(--radius-sm); margin-bottom: 1rem;">
+          <div style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 700;">LIGHTING TECH</div>
+          <h3 style="font-size: 1.1rem; margin: 0.4rem 0;">10 Breakthrough Ambient Lighting Trends for 2026</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Discover how kinetic projection mapping is transforming gala ballrooms into living art canvases.</p>
+        </div>
+
+        <div class="glass-card">
+          <img src="assets/images/blog-2.webp" alt="Blog Post" width="600" height="400" style="border-radius: var(--radius-sm); margin-bottom: 1rem;">
+          <div style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 700;">SUSTAINABILITY</div>
+          <h3 style="font-size: 1.1rem; margin: 0.4rem 0;">Zero-Waste Luxury Galas: How We Achieve Net-Zero</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">A comprehensive blueprint for staging mega events without sacrificing elegance or carbon neutrality.</p>
+        </div>
+
+        <div class="glass-card">
+          <img src="assets/images/blog-3.webp" alt="Blog Post" width="600" height="400" style="border-radius: var(--radius-sm); margin-bottom: 1rem;">
+          <div style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 700;">BUDGETING</div>
+          <h3 style="font-size: 1.1rem; margin: 0.4rem 0;">The Strategic Guide to Allocating High-Impact Event Budgets</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Where to invest for maximum guest awe and where to streamline without compromise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: CTA NEWSLETTER & CONSULTATION BANNER -->
+  <section class="section-spacing" id="section-cta" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(212, 175, 55, 0.15)); border-top: 1px solid var(--glass-border-gold);">
+    <div class="container text-center">
+      <div class="section-badge">Get In Touch</div>
+      <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Host an Unforgettable Event?</h2>
+      <p style="max-width: 600px; margin: 0 auto 2rem auto; color: var(--text-muted);">Schedule a private consultation with an EventCraft senior director today and let's craft your vision into reality.</p>
+      
+      <form onsubmit="event.preventDefault(); if (this.checkValidity()) { window.location.href='404.html'; } else { this.reportValidity(); }" style="max-width: 500px; margin: 0 auto; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <input type="email" placeholder="Enter your business email..." class="form-control" style="flex: 1; min-width: 240px;" required>
+        <button type="submit" class="btn btn-gold">Reserve Call</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS MODAL -->
+  <div class="modal-overlay" id="modal-event-1">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="section-badge">Spotlight Event</div>
+      <h2 style="margin-bottom: 0.5rem;">NextGen AI & Tech Summit 2026</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Join 2,500 tech founders, investors, and engineers for 3 days of keynote speeches, immersive VR booths, and VIP rooftop dinners.</p>
+      
+      <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; display: flex; justify-content: space-between; font-size: 0.9rem;">
+        <span><i class="fas fa-calendar text-gold"></i> Oct 15-17, 2026</span>
+        <span><i class="fas fa-map-marker-alt text-gold"></i> Manhattan Ballroom, NY</span>
+        <span><i class="fas fa-ticket-alt text-gold"></i> $499 Pass</span>
+      </div>
+
+      <div style="display: flex; gap: 1rem;">
+        <a href="404.html" class="btn btn-gold w-100"><i class="fas fa-shopping-cart"></i> Book Ticket Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem; display: inline-block;">
+            <img src="assets/images/logo.webp" alt="Logo" class="brand-logo-img">
+          </a>
+          <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 320px;">The premier luxury event management agency creating timeless celebrations and corporate galas.</p>
+          
+          <!-- SOCIAL ICONS LINKED TO 404 PAGE -->
+          <div class="footer-socials">
+            <a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Events</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">World Leadership Summit</a></li>
+            <li><a href="404.html">Royal Destination Wedding</a></li>
+            <li><a href="404.html">Global Fintech Conclave</a></li>
+            <li><a href="404.html">Symphony Lights Festival</a></li>
+            <li><a href="404.html">International BioMed Expo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Global HQ</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt text-gold"></i> Stackly, Salem, Tamil Nadu</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-envelope text-gold"></i> stacklyinfo@gmail.com</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-phone text-gold"></i> 9876543213</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EventCraft Global Ltd. All rights reserved. Built with GSAP & WebP animations.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP & Main Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Hub | EventCraft Global Calendar</title>
+  <meta name="description" content="Browse upcoming luxury corporate galas, concerts, product launches, and summits hosted by EventCraft. Reserve passes and VIP tickets.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <img src="assets/images/logo.webp" alt="Logo" class="preloader-logo">
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.webp" alt="Logo" class="brand-logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <button class="mobile-nav-close" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="events.html" class="nav-link active">Events</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="mobile-menu-footer">
+          <a href="auth.html" class="btn btn-outline btn-sm"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+          <a href="auth.html?tab=signup" class="btn btn-gold btn-sm"><i class="fas fa-user-plus"></i> Get Started</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="auth.html" class="btn btn-outline btn-sm"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <a href="auth.html?tab=signup" class="btn btn-gold btn-sm"><i class="fas fa-user-plus"></i> Get Started</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: EVENTS HUB HERO HEADER -->
+  <section class="hero-section" style="min-height: 45vh; padding-top: 8rem;">
+    <div class="container text-center">
+      <div class="section-badge"><i class="fas fa-calendar-alt"></i> Global Calendar 2026</div>
+      <h1 class="text-gradient">Discover & Reserve Premium Events</h1>
+      <p style="max-width: 600px; margin: 1rem auto 2rem auto; color: var(--text-muted);">Explore flagship summits, charity galas, and live concerts managed by EventCraft world-wide.</p>
+      
+      <form onsubmit="event.preventDefault(); if (this.checkValidity()) { window.location.href='404.html'; } else { this.reportValidity(); }" style="max-width: 600px; margin: 0 auto; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <input type="text" placeholder="Search event by name or city..." class="form-control" style="flex: 1;" required>
+        <button type="submit" class="btn btn-gold"><i class="fas fa-search"></i> Search Events</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SPOTLIGHT FEATURED EVENT & COUNTDOWN -->
+  <section class="section-spacing" style="background: rgba(15, 23, 42, 0.6);">
+    <div class="container">
+      <div class="glass-card grid-2col" style="gap: 2.5rem; align-items: center; border-color: var(--accent-gold);">
+        <div>
+          <div class="section-badge"><i class="fas fa-star text-gold"></i> Spotlight Flagship</div>
+          <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">World Leadership & Tech Summit 2026</h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Join 3,000 global C-suite executives and tech founders in London for 3 days of transformative keynotes, VIP networking, and gala awards.</p>
+          
+          <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent-gold);">36</div>
+              <div style="font-size: 0.75rem; color: var(--text-dim);">DAYS LEFT</div>
+            </div>
+            <div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent-gold);">14</div>
+              <div style="font-size: 0.75rem; color: var(--text-dim);">HOURS</div>
+            </div>
+            <div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent-gold);">22</div>
+              <div style="font-size: 0.75rem; color: var(--text-dim);">MINS</div>
+            </div>
+          </div>
+
+          <a href="404.html" class="btn btn-gold"><i class="fas fa-ticket-alt"></i> Reserve VIP Delegate Pass</a>
+        </div>
+        <div>
+          <img src="assets/images/hero-bg.webp" alt="Flagship Event" style="border-radius: var(--radius-md);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: BROWSE ALL EVENTS CATALOG -->
+  <section class="section-spacing">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Events Grid</div>
+        <h2>Upcoming Events Roster</h2>
+        <p>Filter by event genre to find your next experience.</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All (6)</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="entertainment">Entertainment</button>
+        <button class="filter-btn" data-filter="gala">Galas</button>
+      </div>
+
+      <div class="cards-grid">
+        <div class="event-card" data-category="corporate">
+          <div class="card-media">
+            <img src="assets/images/corporate.webp" alt="Corporate Event" width="600" height="400" loading="lazy">
+            <div class="card-tag">Oct 22, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>Global Fintech Conclave</h3>
+            <p>Singapore • Marina Bay Sands</p>
+            <div class="card-meta">
+              <span>$299 Delegate</span>
+              <a href="404.html" class="text-gold">Get Pass <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="entertainment">
+          <div class="card-media">
+            <img src="assets/images/concert.webp" alt="Music Fest" width="600" height="400" loading="lazy">
+            <div class="card-tag">Nov 05, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>Neon Wave Electro Fest</h3>
+            <p>Tokyo • Odaiba Open Grounds</p>
+            <div class="card-meta">
+              <span>$120 General</span>
+              <a href="404.html" class="text-gold">Get Pass <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="gala">
+          <div class="card-media">
+            <img src="assets/images/gala.webp" alt="Charity Gala" width="600" height="400" loading="lazy">
+            <div class="card-tag">Nov 18, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>Royal Diamond Charity Ball</h3>
+            <p>Paris • Grand Palais</p>
+            <div class="card-meta">
+              <span>$750 Table</span>
+              <a href="404.html" class="text-gold">Get Pass <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="corporate">
+          <div class="card-media">
+            <img src="assets/images/launch.webp" alt="Tech Launch" width="600" height="400" loading="lazy">
+            <div class="card-tag">Dec 01, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>AeroSpace Innovation Summit</h3>
+            <p>New York • Javits Center</p>
+            <div class="card-meta">
+              <span>$350 Pass</span>
+              <a href="404.html" class="text-gold">Get Pass <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="entertainment">
+          <div class="card-media">
+            <img src="assets/images/expo.webp" alt="Fashion Week" width="600" height="400" loading="lazy">
+            <div class="card-tag">Dec 15, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>Haute Couture Fashion Expo</h3>
+            <p>Milan • Fiera Milano</p>
+            <div class="card-meta">
+              <span>$450 VIP</span>
+              <a href="404.html" class="text-gold">Get Pass <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="gala">
+          <div class="card-media">
+            <img src="assets/images/hero-event.webp" alt="New Year Gala" width="600" height="400" loading="lazy">
+            <div class="card-tag">Dec 31, 2026</div>
+          </div>
+          <div class="card-body">
+            <h3>New Year's Eve Gold Ball</h3>
+            <p>Dubai • Burj Lake Terrace</p>
+            <div class="card-meta">
+              <span>$1,200 VVIP</span>
+              <a href="404.html" class="text-gold">Get Pass <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: PAST CASE STUDIES -->
+  <section class="section-spacing" style="background: rgba(15, 23, 42, 0.5);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Proven Results</div>
+        <h2>Past Event Case Studies</h2>
+        <p>Review metrics from our recent high-profile productions.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+        <div class="glass-card">
+          <h4 class="text-gold">BioMed Global Expo 2025</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0;">12,000 attendees across 4 days in Zurich. Zero downtime on 8 live broadcast stages.</p>
+          <div style="font-weight: 700; font-size: 0.8rem; color: var(--accent-green);">100% On-Time Execution</div>
+        </div>
+
+        <div class="glass-card">
+          <h4 class="text-gold">Starlight Symphony Fest</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0;">25,000 concert goers in Sydney Harbor. Full acoustic control and security zero incident record.</p>
+          <div style="font-weight: 700; font-size: 0.8rem; color: var(--accent-green);">$4.2M Ticket Revenue</div>
+        </div>
+
+        <div class="glass-card">
+          <h4 class="text-gold">Empower Climate Gala</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0;">Raised $3.8M for reforestation. Attended by 5 Heads of State and international ambassadors.</p>
+          <div style="font-weight: 700; font-size: 0.8rem; color: var(--accent-green);">Net-Zero Carbon Certified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TICKETING TIER COMPARISON -->
+  <section class="section-spacing">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Pass Tiers</div>
+        <h2>Choose Your Experience Level</h2>
+        <p>Compare standard, VIP, and VVIP privileges.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="glass-card">
+          <h3>Standard Pass</h3>
+          <div style="font-size: 2rem; font-weight: 800; color: var(--text-main); margin: 0.5rem 0;">$199</div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Main Stage Entry</li>
+            <li><i class="fas fa-check"></i> Digital Event Badge</li>
+            <li><i class="fas fa-check"></i> General Exhibition Access</li>
+          </ul>
+        </div>
+
+        <div class="glass-card" style="border-color: var(--accent-gold);">
+          <h3 class="text-gold">VIP Pass</h3>
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-gold); margin: 0.5rem 0;">$499</div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Fast-Track Priority Entry</li>
+            <li><i class="fas fa-check"></i> Reserved Front-Row Seating</li>
+            <li><i class="fas fa-check"></i> VIP Lounge & Open Bar</li>
+            <li><i class="fas fa-check"></i> Networking App Access</li>
+          </ul>
+        </div>
+
+        <div class="glass-card">
+          <h3>VVIP All-Access</h3>
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-pink); margin: 0.5rem 0;">$1,299</div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Backstage & Greenroom Pass</li>
+            <li><i class="fas fa-check"></i> Private Chauffeur Pickup</li>
+            <li><i class="fas fa-check"></i> Speaker Gala Dinner Seat</li>
+            <li><i class="fas fa-check"></i> 1-on-1 Speaker Meetings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: SPONSORS & PARTNERS -->
+  <section class="section-spacing" style="background: rgba(15, 23, 42, 0.4);">
+    <div class="container text-center">
+      <div class="section-badge">Global Partners</div>
+      <h2>Trusted by World Industry Leaders</h2>
+      
+      <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; opacity: 0.7;">
+        <span style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-heading);">APEX GLOBAL</span>
+        <span style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-heading);">LUMINA MEDIA</span>
+        <span style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-heading);">SOLARIS TECH</span>
+        <span style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-heading);">VORTEX LUXURY</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: HOST YOUR EVENT CTA -->
+  <section class="section-spacing" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(99, 102, 241, 0.15)); border-top: 1px solid var(--glass-border-gold);">
+    <div class="container text-center">
+      <div class="section-badge">For Organizers</div>
+      <h2>Want EventCraft to Manage Your Next Event?</h2>
+      <p style="max-width: 600px; margin: 1rem auto 2rem auto; color: var(--text-muted);">Partner with our production team to turn your vision into an iconic sold-out event.</p>
+      <a href="404.html" class="btn btn-gold"><i class="fas fa-calendar-plus"></i> Submit Event Proposal</a>
+    </div>
+  </section>
+
+  <!-- SECTION 8: FAQ ACCORDION -->
+  <section class="section-spacing">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Attendee Support</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about ticketing, badges, and attendance.</p>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item active">
+          <div class="accordion-header">
+            <span>How do I receive my event ticket & QR badge?</span>
+            <i class="fas fa-chevron-down text-gold"></i>
+          </div>
+          <div class="accordion-content">
+            Upon completion of booking in your Client Portal, your encrypted digital pass with QR code will be available immediately and emailed to your registered address.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>What is the cancellation and refund policy?</span>
+            <i class="fas fa-chevron-down text-gold"></i>
+          </div>
+          <div class="accordion-content">
+            Full refunds are issued up to 14 days prior to event start. Within 14 days, pass transfers to another delegate or event credit are available.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Are dietary requirements accommodated for gala dinners?</span>
+            <i class="fas fa-chevron-down text-gold"></i>
+          </div>
+          <div class="accordion-content">
+            Yes! You can specify vegan, kosher, halal, or allergy requirements directly within your Client Dashboard prior to the event.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem; display: inline-block;">
+            <img src="assets/images/logo.webp" alt="Logo" class="brand-logo-img">
+          </a>
+          <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 320px;">The premier luxury event management agency creating timeless celebrations and corporate galas.</p>
+          
+          <!-- SOCIAL ICONS LINKED TO 404 PAGE -->
+          <div class="footer-socials">
+            <a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Events</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">World Leadership Summit</a></li>
+            <li><a href="404.html">Royal Destination Wedding</a></li>
+            <li><a href="404.html">Global Fintech Conclave</a></li>
+            <li><a href="404.html">Symphony Lights Festival</a></li>
+            <li><a href="404.html">International BioMed Expo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Global HQ</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt text-gold"></i> Stackly, Salem, Tamil Nadu</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-envelope text-gold"></i> stacklyinfo@gmail.com</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted);"><i class="fas fa-phone text-gold"></i> 9876543213</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EventCraft Global Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

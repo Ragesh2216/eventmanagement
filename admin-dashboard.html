@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin HQ Dashboard | EventCraft Control Center</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <img src="assets/images/logo.webp" alt="Logo" class="preloader-logo">
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+
+  <div class="dashboard-layout">
+    <!-- SIDEBAR NAV -->
+    <aside class="sidebar" id="sidebar">
+      <div>
+        <a href="admin-dashboard.html" class="brand-logo" style="margin-bottom: 2rem;">
+          <img src="assets/images/logo.webp" alt="Logo" class="brand-logo-img">
+        </a>
+
+        <ul class="sidebar-menu">
+          <li class="sidebar-item"><a href="admin-dashboard.html" class="sidebar-link active"><i class="fas fa-chart-pie"></i> Executive Overview</a></li>
+          <li class="sidebar-item"><a href="404.html" class="sidebar-link"><i class="fas fa-tasks"></i> Client Approvals</a></li>
+          <li class="sidebar-item"><a href="404.html" class="sidebar-link"><i class="fas fa-chart-line"></i> Revenue Analytics</a></li>
+          <li class="sidebar-item"><a href="404.html" class="sidebar-link"><i class="fas fa-handshake"></i> Vendor Requests</a></li>
+          <li class="sidebar-item"><a href="404.html" class="sidebar-link"><i class="fas fa-history"></i> System Audit Stream</a></li>
+          <li class="sidebar-item"><a href="404.html" class="sidebar-link"><i class="fas fa-globe"></i> Main Website</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <button class="btn btn-outline btn-sm w-100 logout-btn"><i class="fas fa-sign-out-alt"></i> Sign Out HQ</button>
+      </div>
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="dash-main">
+      <!-- HEADER BAR -->
+      <div class="dash-header">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+            <button class="sidebar-toggle" aria-label="Toggle Sidebar"><i class="fas fa-bars"></i> Menu</button>
+            <h2>Executive Admin Command Center</h2>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Global operations control, client approvals & financial forecasting.</p>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div class="user-badge" style="border-color: var(--accent-pink);">
+            <i class="fas fa-user-shield text-gold"></i>
+            <span class="display-user-email">admin@eventcraft.com</span>
+            <span class="status-tag status-confirmed display-user-role" style="background: rgba(236,72,153,0.2); color: var(--accent-pink);">ADMIN HQ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI METRICS ROW -->
+      <div class="dash-metrics-grid">
+        <div class="dash-metric-card">
+          <div style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-dollar-sign text-gold"></i> TOTAL REVENUE 2026</div>
+          <div class="metric-val" style="color: var(--accent-gold);">$1,248,500</div>
+          <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 0.3rem;">+24% vs Last Year</div>
+        </div>
+
+        <div class="dash-metric-card">
+          <div style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-calendar-alt text-gold"></i> ACTIVE EVENTS</div>
+          <div class="metric-val">18</div>
+          <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 0.3rem;">Across 6 Hubs</div>
+        </div>
+
+        <div class="dash-metric-card">
+          <div style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-users text-gold"></i> REGISTERED CLIENTS</div>
+          <div class="metric-val">342</div>
+          <div style="font-size: 0.8rem; color: var(--accent-green); margin-top: 0.3rem;">+18 New Signups</div>
+        </div>
+
+        <div class="dash-metric-card">
+          <div style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-clock text-gold"></i> PENDING APPROVALS</div>
+          <div class="metric-val" style="color: var(--accent-pink);">5</div>
+          <div style="font-size: 0.8rem; color: var(--accent-pink); margin-top: 0.3rem;">Requires Action</div>
+        </div>
+      </div>
+
+      <!-- REVENUE ANALYTICS CANVAS CHART -->
+      <div class="glass-card" id="revenue" style="margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <div>
+            <h3>Monthly Revenue & Budget Growth ($k)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Real-time financial performance trajectory.</p>
+          </div>
+          <a href="404.html" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> Financial Report</a>
+        </div>
+
+        <canvas id="revenueChart" style="width: 100%; height: 240px; border-radius: var(--radius-sm);"></canvas>
+      </div>
+
+      <!-- CLIENT EVENTS APPROVAL TABLE -->
+      <div class="glass-card" id="client-events" style="margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <div>
+            <h3>Client Event Proposals & Bookings</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Review new client event requests and assign status.</p>
+          </div>
+        </div>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Client Email ID</th>
+                <th>Event Name</th>
+                <th>Venue & Location</th>
+                <th>Budget ($)</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>client@eventcraft.com</strong></td>
+                <td>NextGen AI & Tech Summit</td>
+                <td>Manhattan Glass Arena</td>
+                <td>$45,000</td>
+                <td><span class="status-tag status-confirmed">APPROVED</span></td>
+                <td>
+                  <button class="btn btn-outline btn-sm action-approve">Approve</button>
+                  <button class="btn btn-outline btn-sm action-reject" style="color: #ef4444;">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>eleanor.vance@apex.com</strong></td>
+                <td>Apex Leadership Gala</td>
+                <td>London Royal Pavilion</td>
+                <td>$82,000</td>
+                <td><span class="status-tag status-pending">PENDING</span></td>
+                <td>
+                  <button class="btn btn-gold btn-sm action-approve">Approve</button>
+                  <button class="btn btn-outline btn-sm action-reject" style="color: #ef4444;">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>david.chen@luxury.org</strong></td>
+                <td>Royal Lake Como Wedding</td>
+                <td>Villa D'Este, Italy</td>
+                <td>$125,000</td>
+                <td><span class="status-tag status-confirmed">APPROVED</span></td>
+                <td>
+                  <button class="btn btn-outline btn-sm action-approve">Approve</button>
+                  <button class="btn btn-outline btn-sm action-reject" style="color: #ef4444;">Reject</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VENDOR APPROVALS & SYSTEM AUDIT -->
+      <div class="grid-2col" style="gap: 2rem;">
+        <div class="glass-card" id="vendors">
+          <h3>Pending Vendor Registrations</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Caterers & lighting suppliers waiting for accreditation.</p>
+          
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="background: rgba(255,255,255,0.03); padding: 0.8rem; border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="font-size: 0.9rem;">Michelin Gourmet Catering</strong>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">Paris • Luxury Cuisine</p>
+              </div>
+              <a href="404.html" class="btn btn-gold btn-sm">Approve</a>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 0.8rem; border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="font-size: 0.9rem;">ProKinetic Laser Tech</strong>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">New York • Lighting</p>
+              </div>
+              <a href="404.html" class="btn btn-gold btn-sm">Approve</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" id="logs">
+          <h3>Live Audit & Activity Stream</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Real-time system events.</p>
+          
+          <div style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.8rem;">
+            <div style="color: var(--text-muted);"><span class="text-gold">[21:42:01]</span> User <em>client@eventcraft.com</em> updated guest RSVP count to 142.</div>
+            <div style="color: var(--text-muted);"><span class="text-gold">[21:38:15]</span> Payment receipt $15,000 processed for NextGen Summit.</div>
+            <div style="color: var(--text-muted);"><span class="text-gold">[21:15:00]</span> New Client registered: <em>eleanor.vance@apex.com</em>.</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
